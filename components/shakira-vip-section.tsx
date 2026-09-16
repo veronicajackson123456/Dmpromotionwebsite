@@ -8,18 +8,6 @@ import { MapPin, Calendar, BedDouble, Sparkles } from 'lucide-react'
 export function ShakiraVipSection() {
   return (
     <section className="relative overflow-hidden bg-[#0a0a0a] py-24">
-      {/* Background imagery */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/shakira-concert-stage.png"
-          alt="Sold-out stadium concert crowd at night with dramatic gold lighting"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-[#0a0a0a]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/70" />
-      </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Eyebrow */}
         <FadeIn>
@@ -31,82 +19,110 @@ export function ShakiraVipSection() {
           </div>
         </FadeIn>
 
-        {/* Headline */}
-        <FadeIn delay={100}>
-          <h2 className="text-center font-serif font-bold text-white leading-[0.95] tracking-tight mb-3">
-            <span className="block text-5xl sm:text-7xl lg:text-8xl">SHAKIRA</span>
-          </h2>
-        </FadeIn>
-
-        <FadeIn delay={150}>
-          <div className="flex items-center justify-center gap-2 mb-10">
-            <MapPin size={20} className="text-[#c9a55a]" />
-            <p className="text-xl sm:text-2xl font-semibold text-white/90 uppercase tracking-[0.2em]">
-              Madrid <span aria-hidden="true">🇪🇸</span>
-            </p>
-          </div>
-        </FadeIn>
-
-        {/* Primary sales message */}
-        <FadeIn delay={200}>
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-[#c9a55a] uppercase tracking-[0.25em] text-sm font-semibold mb-4">
-              DM Promotions Has VIP Tickets Available
-            </p>
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 text-balance">
-              VIP PACKAGES AVAILABLE
-            </h3>
-          </div>
-        </FadeIn>
-
-        {/* Price + Accommodation highlight cards */}
-        <FadeIn delay={250}>
-          <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-12">
-            <div className="flex flex-col items-center justify-center text-center gap-2 p-8 rounded bg-white/5 backdrop-blur-sm border border-[#c9a55a]/30">
-              <p className="text-white/60 uppercase tracking-[0.2em] text-xs font-medium">
-                Starting From
-              </p>
-              <p className="text-4xl sm:text-5xl font-bold text-[#c9a55a] leading-none">
-                &euro;1,000
-              </p>
-              <p className="text-white/60 text-sm">per person</p>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Image */}
+          <FadeIn delay={100}>
+            <div className="relative aspect-[4/5] lg:aspect-[3/4] rounded-lg overflow-hidden border border-[#c9a55a]/20 shadow-[0_0_60px_rgba(201,165,90,0.15)]">
+              <Image
+                src="/images/shakira-madrid-tour.jpg"
+                alt="Shakira, Las Mujeres Ya No Lloran World Tour artwork"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
-            <div className="flex flex-col items-center justify-center text-center gap-2 p-8 rounded bg-white/5 backdrop-blur-sm border border-[#c9a55a]/30">
-              <BedDouble className="text-[#c9a55a]" size={28} />
-              <p className="text-2xl sm:text-3xl font-bold text-white leading-tight">
-                Accommodation
-              </p>
-              <p className="text-[#c9a55a] uppercase tracking-[0.15em] text-sm font-semibold">
-                Included
-              </p>
-            </div>
-          </div>
-        </FadeIn>
+          </FadeIn>
 
-        {/* Dates */}
-        <FadeIn delay={300}>
-          <div className="flex items-center justify-center gap-2 mb-12 text-white/60">
-            <Calendar size={16} className="text-[#c9a55a]" />
-            <p className="text-sm uppercase tracking-[0.2em]">
-              18 September &ndash; 11 October 2026
-            </p>
-          </div>
-        </FadeIn>
+          {/* Content */}
+          <div>
+            <FadeIn delay={150}>
+              <h2 className="font-serif font-bold text-white leading-[0.95] tracking-tight mb-3">
+                <span className="block text-5xl sm:text-6xl lg:text-7xl">SHAKIRA</span>
+                <span className="block text-3xl sm:text-4xl lg:text-5xl mt-2">MADRID</span>
+              </h2>
+            </FadeIn>
 
-        {/* CTA */}
-        <FadeIn delay={350}>
-          <div className="flex flex-col items-center gap-4">
-            <Link
-              href="/contact"
-              className="inline-block px-12 py-4 bg-[#c9a55a] text-black font-bold rounded hover:bg-[#d4b76a] transition-all duration-300 uppercase tracking-wider text-sm shadow-[0_0_30px_rgba(201,165,90,0.35)]"
-            >
-              Enquire Now
-            </Link>
-            <p className="text-white/50 text-sm">
-              DM for tickets &amp; information
-            </p>
+            <FadeIn delay={200}>
+              <div className="flex items-center gap-2 mb-8">
+                <MapPin size={18} className="text-[#c9a55a]" />
+                <p className="text-[#c9a55a] uppercase tracking-[0.25em] text-sm font-semibold">
+                  An Exclusive VIP Experience by DM Promotions
+                </p>
+              </div>
+            </FadeIn>
+
+            {/* Primary sales message */}
+            <FadeIn delay={250}>
+              <div className="mb-8">
+                <p className="text-white/70 uppercase tracking-[0.15em] text-sm font-medium mb-3">
+                  DM Promotions Has VIP Tickets Available
+                </p>
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-balance leading-tight">
+                  VIP Packages Available Starting From{' '}
+                  <span className="text-[#c9a55a]">&euro;1,000</span> Per Person
+                </h3>
+              </div>
+            </FadeIn>
+
+            {/* Price + Accommodation highlight cards */}
+            <FadeIn delay={300}>
+              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                <div className="flex flex-col items-start justify-center gap-1 p-6 rounded bg-white/5 backdrop-blur-sm border border-[#c9a55a]/30">
+                  <p className="text-white/50 uppercase tracking-[0.2em] text-xs font-medium">
+                    Starting From
+                  </p>
+                  <p className="text-3xl sm:text-4xl font-bold text-[#c9a55a] leading-none">
+                    &euro;1,000
+                  </p>
+                  <p className="text-white/50 text-sm">per person</p>
+                </div>
+                <div className="flex flex-col items-start justify-center gap-1 p-6 rounded bg-white/5 backdrop-blur-sm border border-[#c9a55a]/30">
+                  <BedDouble className="text-[#c9a55a] mb-1" size={22} />
+                  <p className="text-xl sm:text-2xl font-bold text-white leading-tight">
+                    Accommodation
+                  </p>
+                  <p className="text-[#c9a55a] uppercase tracking-[0.15em] text-sm font-semibold">
+                    Included
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Dates */}
+            <FadeIn delay={350}>
+              <div className="flex items-center gap-2 mb-6 text-white/60">
+                <Calendar size={16} className="text-[#c9a55a]" />
+                <p className="text-sm uppercase tracking-[0.2em]">
+                  18 September &ndash; 11 October 2026
+                </p>
+              </div>
+            </FadeIn>
+
+            {/* Description */}
+            <FadeIn delay={400}>
+              <p className="text-white/70 text-base leading-relaxed mb-10 max-w-xl">
+                Experience Shakira in Madrid with an exclusive VIP package from DM
+                Promotions, including accommodation.
+              </p>
+            </FadeIn>
+
+            {/* CTA */}
+            <FadeIn delay={450}>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-block px-12 py-4 bg-[#c9a55a] text-black font-bold rounded hover:bg-[#d4b76a] transition-all duration-300 uppercase tracking-wider text-sm text-center shadow-[0_0_30px_rgba(201,165,90,0.35)]"
+                >
+                  Enquire Now
+                </Link>
+                <p className="text-white/50 text-sm">
+                  DM for tickets &amp; information
+                </p>
+              </div>
+            </FadeIn>
           </div>
-        </FadeIn>
+        </div>
       </div>
     </section>
   )
