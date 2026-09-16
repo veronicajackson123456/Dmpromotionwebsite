@@ -37,9 +37,17 @@ export function ShakiraVipSection() {
           {/* Content */}
           <div>
             <FadeIn delay={150}>
-              <h2 className="font-serif font-bold text-white leading-[0.95] tracking-tight mb-3">
-                <span className="block text-5xl sm:text-6xl lg:text-7xl">SHAKIRA</span>
-                <span className="block text-3xl sm:text-4xl lg:text-5xl mt-2">MADRID</span>
+              <h2 className="font-serif font-bold leading-[0.9] tracking-tight mb-5">
+                <span className="block text-6xl sm:text-7xl lg:text-8xl bg-gradient-to-b from-[#f2dfa8] via-[#c9a55a] to-[#8a6f34] bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(201,165,90,0.35)]">
+                  SHAKIRA
+                </span>
+                <span className="flex items-center gap-4 mt-4">
+                  <span className="h-px flex-1 bg-gradient-to-r from-transparent to-[#c9a55a]/60" />
+                  <span className="text-lg sm:text-xl lg:text-2xl font-sans font-medium text-white/90 tracking-[0.5em]">
+                    MADRID
+                  </span>
+                  <span className="h-px flex-1 bg-gradient-to-l from-transparent to-[#c9a55a]/60" />
+                </span>
               </h2>
             </FadeIn>
 
@@ -59,8 +67,7 @@ export function ShakiraVipSection() {
                   DM Promotions Has VIP Tickets Available
                 </p>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-balance leading-tight">
-                  VIP Packages Available Starting From{' '}
-                  <span className="text-[#c9a55a]">&euro;1,000</span> Per Person
+                  Reserve Your Place in the VIP Experience
                 </h3>
               </div>
             </FadeIn>
@@ -70,7 +77,7 @@ export function ShakiraVipSection() {
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
                 <div className="flex flex-col items-start justify-center gap-1 p-6 rounded bg-white/5 backdrop-blur-sm border border-[#c9a55a]/30">
                   <p className="text-white/50 uppercase tracking-[0.2em] text-xs font-medium">
-                    Starting From
+                    Starting Price
                   </p>
                   <p className="text-3xl sm:text-4xl font-bold text-[#c9a55a] leading-none">
                     &euro;1,000
